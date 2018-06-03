@@ -19,7 +19,7 @@ class App < Sinatra::Base
     count = 0
     until count == @number
       @phrase
-      count += 
+      count += 1
     end
   end
     
