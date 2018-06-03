@@ -16,11 +16,7 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do
     @number = params[:number]
     @phrase = params[:phrase]
-    count = 0
-    until count == @number.to_i
-      "#{@phrase.split('%20').join(' ')}"
-      count += 1
-    end
+    "#{@phrase.split('%20').join(' ')}" * @number.to_i
   end
   
   get '/say/:word1/:word2/:word3/:word4/:word5' do
