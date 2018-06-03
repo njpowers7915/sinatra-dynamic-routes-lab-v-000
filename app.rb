@@ -15,10 +15,10 @@ class App < Sinatra::Base
   
   get '/say/:number/:phrase' do
     @number = params[:number]
-    @phrase = params[:phrase].split('%20').join(' ')
+    @phrase = params[:phrase]
     count = 0
     until count == @number.to_i
-      @phrase
+      "#{@phrase.split('%20').join(' ')}"
       count += 1
     end
   end
