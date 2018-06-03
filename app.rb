@@ -32,11 +32,11 @@ class App < Sinatra::Base
     "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}."
   end
   
-  get '/:operation/:number1/:number2'
+  get '/:operation/:number1/:number2' do
     @operation = params[:operation]
     @number1 = params[:number1]
     @number2 = params[:number2]
-    "#{@number1.to_i + @number2.to_i}"
+    "#{@number1.to_i @operation @number2.to_i}"
   end
     
 end
