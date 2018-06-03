@@ -7,5 +7,3 @@ class App < Sinatra::Base
     @name = params[:name]
     @name.reverse
   end
-  
-end
