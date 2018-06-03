@@ -8,11 +8,4 @@ class App < Sinatra::Base
     @name.reverse!
   end
   
-  get '/square/:number'
-  
-  end
-  
-  get '/say/:number/:phrase'
-end
-  
 end
