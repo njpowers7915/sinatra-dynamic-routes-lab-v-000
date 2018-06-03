@@ -17,7 +17,7 @@ class App < Sinatra::Base
     @number = params[:number]
     @phrase = params[:phrase].split('%20').join(' ')
     count = 0
-    until count == @number
+    until count == @number.to_i
       @phrase
       count += 1
     end
