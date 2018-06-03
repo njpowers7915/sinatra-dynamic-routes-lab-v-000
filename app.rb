@@ -17,5 +17,6 @@ class App < Sinatra::Base
     @number = params[:number]
     @phrase = params[:phrase]
     new_phrase = @phrase.split('%20').join(' ')
+    @number.to_i.times
     
 end
